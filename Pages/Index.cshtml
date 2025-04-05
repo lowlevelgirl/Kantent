@@ -1,0 +1,67 @@
+﻿@page
+@model IndexModel
+@{
+    string picture = (string)"https://i1.sndcdn.com/artworks-ge5IPV2dcY2y5vpH-fQKQZg-t500x500.jpg";
+    string name = (string)"Lain Iwakura";
+    int subs = (int)50000;
+    int videos = (int)1000;
+    string type = (string)"тэхналёгіі";
+}
+
+<div class="text-center">
+<div class="settings">
+    <select class="lang">
+        <option>Беларуская</option>
+        <option>Biełaruskaja (Łacinka)</option>
+        <option>English (US)</option>
+    </select>
+</div><br>
+<ul class="tabs">
+    <li data-tab-target="#youtube" class="active tab">Ютуб</li>
+    <li data-tab-target="#tiktok" class="tab">Тыкток</li>
+    <li data-tab-target="#twitch" class="tab">Твіч</li>
+    <li data-tab-target="#music" class="tab">Гурты</li>
+    <li data-tab-target="#other" class="tab">Рознае</li>
+</ul>
+<br>
+<div class="tab-content">
+    <div id="youtube" data-tab-content class="active">
+        <div class="settings">
+            <button class="add">Дадаць канал</button>
+        </div>
+        <p class="channels border-bottom box-shadow navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white mb-3">
+            <img src="@picture" width="60" height="60" class="pfp" />
+            <a href="/" class="channel-link">@name</a>
+            <a class="channel-type">@type</a>
+            <a class="channel-data">@subs падпісантаў @videos відэа</a>
+        </p>
+
+        <p class="channels border-bottom box-shadow navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white mb-3">
+            <img src="@picture" width="60" height="60" class="pfp" />
+            <a href="/" class="channel-link">@name</a>
+            <a class="channel-type">творчасьць</a>
+            <a class="channel-data">@subs падпісантаў @videos відэа</a>
+        </p>
+    </div>
+    <div id="tiktok" data-tab-content>
+        <div class="settings">
+            <button class="add">Дадаць акаўнт</button>
+        </div>
+    </div>
+    <div id="twitch" data-tab-content>
+        <div class="settings">
+            <button class="add">Дадаць акаўнт</button>
+        </div>
+    </div>
+    <div id="music" data-tab-content>
+        <div class="settings">
+            <button class="add">Дадаць гурт</button>
+        </div>
+    </div>
+    <div id="other" data-tab-content>
+        <div class="settings">
+            <button class="add">Дадаць нешта</button>
+        </div>
+    </div>
+  </div>
+</div>
