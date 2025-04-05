@@ -23,6 +23,16 @@ a {
   border-color: #1861ac;
 }
 
+.nav-link {
+  font-size: 1.3em !important;
+  color: black;
+  margin-left: 2em;
+}
+
+links {
+  margin-left: 4em;
+}
+
 .border-top {
   border-top: 1px solid #e5e5e5;
 }

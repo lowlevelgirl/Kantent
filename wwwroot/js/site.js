@@ -1,4 +1,16 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const tabs = document.querySelectorAll('[data-tab-target]');
+const tabContents = document.querySelectorAll('[data-tab-content]');
 
-// Write your JavaScript code.
+tabs.forEach(tab => {
+tab.addEventListener('click', () => {
+  const target = document.querySelector(tab.dataset.tabTarget);
+  tabContents.forEach(tabContent => {
+    tabContent.classList.remove('active');
+  });
+  tabs.forEach(tab => {
+    tab.classList.remove('active');
+  });
+  tab.classList.add('active');
+  target.classList.add('active');
+  });
+});
